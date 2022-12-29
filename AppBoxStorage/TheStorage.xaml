@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="AppBoxStorage.TheStorage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppBoxStorage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF11E7EE"/>
+                <GradientStop Color="#FF21E68B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="The Storage" TextAlignment="Center" FontSize="60" FontWeight="Bold" Grid.ColumnSpan="3"    />
+        <TextBox x:Name="_x" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="36"/>
+        <TextBox x:Name="_y" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="36"/>
+        <TextBox x:Name="_num" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Center" FontSize="36"/>
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="X:" TextAlignment="Center" FontSize="35" />
+        <TextBlock Grid.Row="3" TextWrapping="Wrap" Text="Y:" TextAlignment="Center" FontSize="35"   />
+        <TextBlock Grid.Row="4" TextWrapping="Wrap" Text="Num of box:" TextAlignment="Center" FontSize="35"   />
+        <Button x:Name="_goBack" Grid.Column="2" Content="Go back" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" FontSize="35" FontWeight="Bold" Background="#FFEF2424" Click="_goBack_Click"/>
+        <Button x:Name="_add" Grid.Column="0" Content="Add box" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black"    FontSize="35" FontWeight="Bold" Background="#FF2AEF24" Click="_add_Click"/>
+        <ListView  x:Name="_theList" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  Grid.Row="2" Grid.RowSpan="5" VerticalAlignment="Stretch"></ListView>
+         
+
+    </Grid>
+</Page>
+
+            <!--<ListView.Items>
+                <x:String>item:s</x:String>
+            </ListView.Items>-->
+      
+
+        <!--</ListView>-->
